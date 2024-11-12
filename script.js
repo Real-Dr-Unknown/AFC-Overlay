@@ -1,7 +1,5 @@
 
 let configData = {
-    "home_logo": "",
-    "away_logo": "",
     "timer_property": "",
     "home": "",
     "away": "",
@@ -9,15 +7,16 @@ let configData = {
     "away_color": "",
     "home_text_color": "",
     "away_text_color": "",
-    "score_text_color": "",
-    "score_background_color": "",
     "timer_text_color": "",
     "timer_background_color": "",
     "clock_start_time": "",
+    "minute": "",
+    "second": ""
 }
 
 function updateConfig(newData) {
     configData = { ...configData, ...newData };
+    console.log(configData)
 }
 
 function converttime(tiptop) {
@@ -27,8 +26,8 @@ function converttime(tiptop) {
     let tip_sec = Math.floor(tip % 60);
 
     console.log(tip_min, tip_sec, tiptop)
-    min = tip_min
-    sec = tip_sec
+    min = min + tip_min
+    sec = sec + tip_sec
 }
 
 
@@ -51,6 +50,7 @@ let aT = true
 
 function minsetter() {
     min = document.getElementById('timMin').value
+    updateConfig({ minute: document.getElementById('timMin').value });
     min = Number(min)
 
     if (sec < 10 && min < 10) {
@@ -132,28 +132,6 @@ function aTCSetter() {
     updateConfig({ away_text_color: document.getElementById('aTColor').value });
 }
 
-function hLSetter() {
-    document.getElementById('hImage').src = document.getElementById('hLogo').value
-    updateConfig({ home_logo: document.getElementById('hLogo').value });
-}
-
-function aLSetter() {
-    document.getElementById('aImage').src = document.getElementById('aLogo').value
-    updateConfig({ away_logo: document.getElementById('aLogo').value });
-}
-
-function sTSetter() {
-    let sT = document.getElementById('scS')
-    sT.style.color = document.getElementById('sTColor').value
-    updateConfig({ score_text_color: document.getElementById('sTColor').value });
-}
-
-function sBSetter() {
-    let sB = document.getElementById('scS')
-    sB.style.backgroundColor = document.getElementById('sBColor').value
-    updateConfig({ score_background_color: document.getElementById('sBColor').value });
-}
-
 function tTSetter() {
     let tT = document.getElementById('timerDisplay')
     tT.style.color = document.getElementById('tTColor').value
@@ -202,12 +180,8 @@ document.getElementById('hColor').addEventListener("input", hCSetter)
 document.getElementById('aColor').addEventListener("input", aCSetter)
 document.getElementById('hTColor').addEventListener("input", hTCSetter)
 document.getElementById('aTColor').addEventListener("input", aTCSetter)
-document.getElementById('sTColor').addEventListener("input", sTSetter)
-document.getElementById('sBColor').addEventListener("input", sBSetter)
 document.getElementById('tTColor').addEventListener("input", tTSetter)
 document.getElementById('tBColor').addEventListener("input", tBSetter)
-document.getElementById('hLogo').addEventListener("input", hLSetter)
-document.getElementById('aLogo').addEventListener("input", aLSetter)
 document.getElementById('autoSwitcher').addEventListener("click", autooS)
 
 async function checker() {
@@ -290,14 +264,6 @@ function presetter() {
         AAA.textContent = configData.away.toUpperCase();
     }
 
-    if (configData.home_logo) {
-        document.getElementById('hImage').src = configData.home_logo;
-    }
-
-    if (configData.away_logo) {
-        document.getElementById('aImage').src = configData.away_logo;
-    }
-
     if (configData.home_color) {
         let clrdivH = document.getElementById('hhN')
         let imgbackD = document.getElementById('imgBackH')
@@ -322,6 +288,49 @@ function presetter() {
         AAAC.style.color = configData.away_text_color;
     }
 
+    if (configData.minute) {
+
+        min = configData.minute
+        min = Number(min)
+
+        if (sec < 10 && min < 10) {
+            clockk.textContent = '0' + min + ':' + '0' + sec;
+        }
+        if (min < 10 && sec > 9) {
+            clockk.textContent = '0' + min + ':' + sec;
+        }
+        if (min > 9 && sec < 10) {
+            clockk.textContent = min + ':' + '0' + sec;
+        }
+        if (sec > 9 && min > 9) {
+            clockk.textContent = min + ':' + sec;
+        }
+    }
+
+    if (configData.second) {
+
+        sec = configData.second
+        sec = Number(sec);
+
+        if (sec > 59) {
+            document.getElementById('timSec').value = null
+            sec = 0
+            min++
+        }
+        if (sec < 10 && min < 10) {
+            clockk.textContent = '0' + min + ':' + '0' + sec;
+        }
+        if (min < 10 && sec > 9) {
+            clockk.textContent = '0' + min + ':' + sec;
+        }
+        if (min > 9 && sec < 10) {
+            clockk.textContent = min + ':' + '0' + sec;
+        }
+        if (sec > 9 && min > 9) {
+            clockk.textContent = min + ':' + sec;
+        }
+    }
+
     if (configData.timer_property == "start") {
         let spend_time = Date.now() - configData.clock_start_time
         converttime(spend_time)
@@ -335,7 +344,9 @@ function presetter() {
     if (configData.timer_property == "reset") {
         resetbutt()
     }
+
 }
+
 
 start.onclick = function starttimer() {
     if (!isRunning) {

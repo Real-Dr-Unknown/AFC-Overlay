@@ -1,1 +1,284 @@
+body {
+    padding: 0;
+    margin: 0;
+}
 
+
+.main {
+    width: 540px;
+    margin: auto;
+    margin-top: 3%;
+    background-color: white;
+    height: 40px;
+    z-index: -100;
+}
+
+.headdiv {
+    display: flex;
+    background-color: #D80E26;
+    padding-top: 3px;
+    width: 366px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    font-family: "Moul", serif;
+}
+
+.heading {
+    display: flex;
+    float: left;
+    color: white;
+    font-weight: lighter;
+    margin-left: 33px;
+    transform: scaleX(1.2);
+    letter-spacing: -1px;
+}
+
+.road {
+    display: flex;
+    justify-content: right;
+    color: white;
+    margin-right: -15px;
+    padding-bottom: 3px;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: "Bebas Neue", serif;
+    transform: scale(0.6)
+}
+
+.home_name {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: white;
+    color: black;
+    padding-top: 5px;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: "Bebas Neue", serif;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.score {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: #1D3F8C;
+    color: white;
+    padding-top: 5px;
+    font-size: 27px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 50px;
+    height: 40px;
+    margin-right: 3px;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.away_name {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: #D80E26;
+    color: white;
+    padding-top: 5px;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: "Bebas Neue", serif;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.timer {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: white;
+    background-color: #1D3F8C;
+    font-size: 27px;
+    font-weight: bold;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.extra_time {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    margin-right: 18px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    visibility: hidden;
+}
+
+/* Input Feilds Stype */
+
+.nicha {
+    background-color: white;
+}
+
+.timDiv {
+    width: 45%;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tminn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.timsecc {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.minSec {
+    margin-left: 15px;
+    text-align: center;
+    width: 12%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ht {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.at {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.namer {
+    margin-left: 15px;
+    text-align: center;
+    width: 15%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.NDiv {
+    width: 45%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.mBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.Btnn {
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(5, 40, 178);
+    background-color: rgb(0, 255, 132);
+    border-radius: 8px;
+}
+
+.jLab {
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Colorr {
+    margin-left: 15px;
+    text-align: center;
+    width: 20%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Logo {
+    margin-left: 15px;
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divCAS {
+    background-color: rgb(56, 232, 255);
+    display: flex;
+    padding-left: 3px;
+    padding-right: 3px;
+    justify-content: right;
+    margin: 5px;
+    border: 3px solid black;
+    width: 60px;
+    border-radius: 30px;
+}
+
+.circle {
+    display: flex;
+    background-color: rgb(215, 209, 209);
+    width: 20px;
+    border-radius: 50px;
+    margin: 3px;
+    border: 5px solid white;
+}
+
+.cAS {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    opacity: 0;
+}
+
+.lal {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
