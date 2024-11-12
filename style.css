@@ -136,7 +136,7 @@ body {
     height: 43px;
     justify-content: center;
     align-items: center;
-    visibility: visible;
+    visibility: hidden;
 }
 
 /* Input Feilds Stype */
