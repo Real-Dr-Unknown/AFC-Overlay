@@ -106,17 +106,13 @@ function asetter() {
 
 function hCSetter() {
     let clrdivH = document.getElementById('hhN')
-    let imgbackD = document.getElementById('imgBackH')
     clrdivH.style.backgroundColor = document.getElementById('hColor').value
-    imgbackD.style.backgroundColor = document.getElementById('hColor').value
     updateConfig({ home_color: document.getElementById('hColor').value });
 }
 
 function aCSetter() {
     let clrdivA = document.getElementById('aaN')
-    let imgbackC = document.getElementById('imgBackA')
     clrdivA.style.backgroundColor = document.getElementById('aColor').value
-    imgbackC.style.backgroundColor = document.getElementById('aColor').value
     updateConfig({ away_color: document.getElementById('aColor').value });
 }
 
@@ -268,19 +264,17 @@ function presetter() {
         let clrdivH = document.getElementById('hhN')
         let imgbackD = document.getElementById('imgBackH')
         clrdivH.style.backgroundColor = configData.home_color;
-        imgbackD.style.backgroundColor = configData.home_color;
     }
 
     if (configData.away_color) {
         let clrdivA = document.getElementById('aaN')
         let imgbackC = document.getElementById('imgBackA')
         clrdivA.style.backgroundColor = configData.away_color;
-        imgbackC.style.backgroundColor = configData.away_color;
     }
 
     if (configData.home_text_color) {
         let HHHC = document.getElementById('hhN')
-        HHHC.style.color = conconfigData.home_text_color;
+        HHHC.style.color = configData.home_text_color;
     }
 
     if (configData.away_text_color) {
