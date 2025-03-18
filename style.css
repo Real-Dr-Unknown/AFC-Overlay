@@ -122,6 +122,11 @@ body {
     float: left;
 }
 
+#exxtexxt {
+    display: none;
+    margin-top: -45px;
+}
+
 .extra_time {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
