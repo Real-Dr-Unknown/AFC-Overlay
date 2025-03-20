@@ -39,8 +39,8 @@ let pextimer = document.getElementById('exxtexxt')
 
 let waitext = 0;
 let exisRunning = false;
-let exmin = 8;
-let exsec = 58;
+let exmin = 0;
+let exsec = 0;
 let showADS = false;
 let ajC = null;
 let fClera = null;
